@@ -2,9 +2,12 @@ import { Container } from 'postcss'
 import React from 'react'
 
 const Manager = () => {
+    const showpassword = () => {
+        alert("show the password")
+    }
     return (
         <>
-            <div class="absolute top-0 z-[-2] h-screen w-screen bg-[linear-gradient(120deg,#d4fc79_0%,#96e6a1_100%)]"
+            <div classname="absolute top-0 z-[-2] h-screen w-screen bg-[linear-gradient(120deg,#d4fc79_0%,#96e6a1_100%)]"
             ></div>
 
             <div className="mycontainer ">
@@ -16,11 +19,16 @@ const Manager = () => {
 
                 <div className="text-white flex flex-col p-4 gap-8 items-center">
 
-                    <input className='rounded-full border border-green-500 w-full text-black p-4 py-1' type="text" name='' id='' />
-                    <div className="flex">
-                        <input className='rounded-full border border-green-500 w-full text-black p-4 py-1 ' type="text" name='' id='' />
-                        <input className='rounded-full border border-green-500 w-full text-black p-4 py-1' type="text" name='' id='' />
+                    <input placeholder='Enter website URL' className='rounded-full border border-green-500 w-full text-black p-4 py-1' type="text" name='' id='' />
+                    <div className="flex w-full justify-between gap-4">
+                        <input placeholder='Enter Username' className='rounded-full border border-green-500 w-full text-black p-4 py-1 ' type="text" name='' id='' />
+                        <div className="relative">
+
+                        <input placeholder='Enter Password' className='rounded-full border border-green-500 w-full text-black p-4 py-1' type="text" name='' id='' />
+                        <span className='absolute right-0 text-black onClick={showpassword}'>Show</span>
+                        </div>
                     </div>
+
 
 
                     <button className="flex justify-center items-center gap-3 bg-green-400 rounded-full px-2 py-2 w-fit">
