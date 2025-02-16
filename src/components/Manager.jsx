@@ -1,9 +1,14 @@
 import { Container } from 'postcss'
 import React from 'react'
+import { useState } from 'react'
 
 const Manager = () => {
+
+   const [form, setform] = useState({}) 
     const showpassword = () => {
         alert("show the password")
+    }
+    const savePassword = () => { 
     }
     return (
         <>
@@ -19,7 +24,7 @@ const Manager = () => {
 
                 <div className="text-white flex flex-col p-4 gap-8 items-center">
 
-                    <input placeholder='Enter website URL' className='rounded-full border border-green-500 w-full text-black p-4 py-1' type="text" name='' id='' />
+                    <input value={form.site} placeholder='Enter website URL' className='rounded-full border border-green-500 w-full text-black p-4 py-1' type="text" name='' id='' />
                     <div className="flex w-full justify-between gap-4">
                         <input placeholder='Enter Username' className='rounded-full border border-green-500 w-full text-black p-4 py-1 ' type="text" name='' id='' />
                         <div className="relative">
@@ -31,7 +36,7 @@ const Manager = () => {
 
 
 
-                    <button className="flex justify-center items-center gap-3 bg-green-400 rounded-full px-2 py-2 w-fit">
+                    <button onClick={savePassword} className="flex justify-center items-center gap-3 bg-green-400 rounded-full px-2 py-2 w-fit">
                         <lord-icon
                             src="https://cdn.lordicon.com/exymduqj.json"
                             trigger="hover">
