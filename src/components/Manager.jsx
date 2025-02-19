@@ -12,7 +12,8 @@ const Manager = () => {
   }, []);
 
   const showPassword = () => {
-    alert("Show the password");
+    alert("Show the password"); 
+    
   };
 
   const savePassword = () => {
