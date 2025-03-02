@@ -107,22 +107,14 @@ const Manager = () => {
                 <th className="py-2">Password</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td className="py-2 border-black text-center w-32 ">The Sliding Mr. Bones (Next Stop, Pottersville)</td>
-                <td className="py-2 border-black text-center w-32">Malcolm Lockyer</td>
-                <td className="py-2 border-black text-center w-32">1961</td>
+            <tbody className="bg-green-100">
+              {passwordArray.map((item)=>{
+                return<tr>
+                <td className="py-2 border-black text-center w-32 "><a.hre{item.site}</td>
+                <td className="py-2 border-black text-center w-32">{item.username}</td>
+                <td className="py-2 border-black text-center w-32">{item.password}</td>
               </tr>
-              <tr>
-                <td className="py-2 border-black text-center w-32">Witchy Woman</td>
-                <td className="py-2 border-black text-center w-32">The Eagles</td>
-                <td className="py-2 border-black text-center w-32">1972</td>
-              </tr>
-              <tr>
-                <td className="py-2 border-black text-center w-32">Shining Star</td>
-                <td className="py-2 border-black text-center w-32">Earth, Wind, and Fire</td>
-                <td className="py-2 border-black text-center w-32">1975</td>
-              </tr>
+              })}
             </tbody>
           </table>
 
