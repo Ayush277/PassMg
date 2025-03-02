@@ -12,8 +12,8 @@ const Manager = () => {
   }, []);
 
   const showPassword = () => {
-    alert("Show the password"); 
-    
+    alert("Show the password");
+
   };
 
   const savePassword = () => {
@@ -21,7 +21,7 @@ const Manager = () => {
     setPasswordArray(updatedPasswords);
     localStorage.setItem("passwords", JSON.stringify(updatedPasswords));
     console.log(updatedPasswords);
-    
+
     // Reset the form after saving
     setForm({ site: "", username: "", password: "" });
   };
@@ -37,8 +37,8 @@ const Manager = () => {
       <div className="mycontainer">
         <h1 className="text-4xl font-bold text-center">
           <span className="text-green-600">&lt;</span>
-          <span>Pass</span>
-          <span className="text-green-600">MG</span>
+          <span>VAULT</span>
+          <span className="text-green-600">IFY</span>
           <span className="text-green-600">&gt;</span>
         </h1>
         <p className="text-green-600 text-center">Your EZ Password Manager</p>
@@ -94,6 +94,38 @@ const Manager = () => {
             ></lord-icon>
             Add password
           </button>
+        </div>
+        <div className="passwords">
+          <h2 className="font-bold text-2xl py-4">your passwords</h2>
+          {passwordArray.length === 0 && <div>No password to show</div>}
+          {passwordArray.length !== 0 && <table className="table-auto w-full rounded-md"></table>}
+          <table className="table-auto w-full bg-green-100 font-white rounded-md overflow-hidden">
+            <thead className="bg-green-200">
+              <tr>
+                <th className="py-2">Site</th>
+                <th className="py-2">Username</th>
+                <th className="py-2">Password</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="py-2 border-black text-center w-32 ">The Sliding Mr. Bones (Next Stop, Pottersville)</td>
+                <td className="py-2 border-black text-center w-32">Malcolm Lockyer</td>
+                <td className="py-2 border-black text-center w-32">1961</td>
+              </tr>
+              <tr>
+                <td className="py-2 border-black text-center w-32">Witchy Woman</td>
+                <td className="py-2 border-black text-center w-32">The Eagles</td>
+                <td className="py-2 border-black text-center w-32">1972</td>
+              </tr>
+              <tr>
+                <td className="py-2 border-black text-center w-32">Shining Star</td>
+                <td className="py-2 border-black text-center w-32">Earth, Wind, and Fire</td>
+                <td className="py-2 border-black text-center w-32">1975</td>
+              </tr>
+            </tbody>
+          </table>
+
         </div>
       </div>
     </>
