@@ -113,6 +113,7 @@ const Manager = () => {
                 <td className="py-2 border-black text-center w-32 "><a.hre{item.site}</td>
                 <td className="py-2 border-black text-center w-32">{item.username}</td>
                 <td className="py-2 border-black text-center w-32">{item.password}</td>
+                /* //updatedPasswords.map(( */
               </tr>
               })}
             </tbody>
